@@ -1,0 +1,6 @@
+Criando o primeiro componente
+	Os componentes ficam dentro de uma pasta chamada "components", que criamos em src.
+	Nomeados em CamelCase: FirstComponent.jsx.
+	A utilização da extensão .jsx facilita a formatação para os editores.
+	Dentro do componente, precisamos criar e exportar uma função, que é a lógica dele.
+
