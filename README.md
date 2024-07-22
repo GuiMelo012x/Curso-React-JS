@@ -3,5 +3,5 @@ Parte de React JS do Curso de Front-End que estou fazendo na Udemy: "Formação 
 
 Aqui, colocarei os arquivos apenas da parte de React JS do curso.
 
-##### Parte de JavaScript --> https://github.com/GuiMelo012x/Curso-JavaScript.git
-##### Parte de HTML e CSS --> https://github.com/GuiMelo012x/Formacao-Front-End-HTML-CSS-JavaScript.git
+#### Parte de JavaScript --> https://github.com/GuiMelo012x/Curso-JavaScript.git
+#### Parte de HTML e CSS --> https://github.com/GuiMelo012x/Formacao-Front-End-HTML-CSS-JavaScript.git
