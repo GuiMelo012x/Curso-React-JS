@@ -4,3 +4,108 @@ Criando o primeiro componente
 	A utilização da extensão .jsx facilita a formatação para os editores.
 	Dentro do componente, precisamos criar e exportar uma função, que é a lógica dele.
 
+Importando componentes
+	Para utilizar e reutilizar um componente é necessário o processo de importação.
+	A sintaxe é:
+		import X from './components/X.jsx --> Sendo X = o nome do componente.
+	Para inserir o componente dentro de outro, vamos utilizar a sintaxe de tag do HTML com o nome do componente:
+		<FirstComponent/>
+	Exemplo:
+		<div>
+		  <h1>Fundamentos do React</h1>
+		  <FirstComponent/>
+		</div>
+
+JSX
+	É o html do react, o código interno das funções de componentes, após o return.
+	Vamos escrever as nossas tags e importar os outros componentes.
+	Há algumas diferenças do HTML, ex: Class --> className.
+	Podemos escrever JavaScript dentro de JSX.
+	O JSX pode ter apenas um elemento pai.
+	
+Comentários no Componente
+	Há duas formas de inserir comentários em React.
+	Podemos utilizar a sintaxe de JS fora e dentro das funções, com: // Comentário.
+	Ou no JSX, com {/*Algum comentário*/}.
+	As chaves são necessárias para executar qualquer instrução de JS.
+	Exemplo:
+		// Comentário --> fora da função.
+		{/* Comentário */} --> dentro da função.
+		
+Template Expressions
+	É o recurso de permite a execução de JS no JSX.
+	Podemos inserir variáveis.
+	A sintaxe é: {2+2}
+	Entre as chaves, tudo será entendido como executável.
+	Exemplo:
+		Arquivo TemplateExpressions.jsx dentro de components: 
+			const TemplateExpressions = () => {
+			const name ="Gui"
+			  return (
+				<div>
+					<p>A soma é {2+2}</p>
+					<p>Olá {name}</p>
+				</div>
+			  )
+			}
+
+			export default TemplateExpressions
+
+Hierarquia de componentes
+	Os componentes podem ser reutilizados em outros componentes.
+	Podemos montar também uma hierarquia, onde um componente é pai do outro.
+	E ao importar o componente pai, todos os outros vem juntos.
+
+Evento de click
+	Os eventos são essenciasi para programar apps de front-end, vimos isso em DOM.
+	Em react, temos os mesmos eventos, só que de forma simplificada.
+	Por exemplo: com onClick, conseguimos disparar um evento que ativa uma função ao clicar em um elemnto.
+	Exemplo:
+	  <button onClick={() => console.log("Testando o Evento")}>Clique aqui</button>
+	  
+Evento com Função
+	Quando temos lógicas complexas, é mais indicado criar uma função para o evento.
+	Isso vai separar as responsabilidades, e deixar nosso código mais fácil na questão de manutenção.
+	Exemplo:
+		const Events = () => {
+			const handleClick = () => {
+			  console.log("Executou com função");
+			};
+			<button onClick={handleClick}>Clique aqui com Função</button>
+	
+Funções de Renderização
+	Podemos criar funções nos componentes que retornam JSX.
+	Isso pode ser utilizada para uma renderização condicional, por exemplo.
+	Fazendo que o JSX varie dependendo do resultado da operação.
+
+Imagens no React
+	As imagens do projeto podem ficar na pasta public.
+	Estando lá, elas podem ser utilizadas diretamente no projeto.
+	A pasta public fica linkada com a src, exemplo:
+		"/imagem.png"
+	Exemplo:
+		<img src="/img.jpg" alt="Imagem" />
+
+Imagens em Assets
+	Outro local comum de colocar as imagens de um projeto em react é na pasta "assets".
+	Em assets, precisamos importar a imagem, como se fosse um componente.
+	Estas duas abordagens são muito utilizadas.
+	Exemplo:
+		import night from './assets/night.jpg'
+		[...]
+		<img src={night} alt="Imagem 2" />
+
+O que são Hooks?
+	Recursos do React que tem diversas funções, podemos criar os nossos também.
+	Exemplo: guardar e alterar o estado de algum dado.
+	Os hookes precisam ser importados, e sempre começam com a palavra "use".
+	Alguns bem utilizados são: useState,useEffect, useCallback, useRef e outros.
+	Os hooks que nós criamos são chamadas de custom hooks.
+	Geralmente, toda a aplicação usa pelo menos um hook.
+	
+Hook: useState
+	O useState é um dos mais utilizados.
+	Podemos gerenciar o estado de um ou mais dados, é como se fosse um getter/setter.
+	Utilizamos este hook pois as variáveis não funcionam como esperado, elas não re-renderizam o componente.
+	Para guardar um dado, utilizamos o "setNomeDoDado".
+	
